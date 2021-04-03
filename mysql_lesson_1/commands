@@ -1,0 +1,16 @@
+2)
+CREATE DATABASE IF NOT EXISTS example;
+USE example;
+CREATE TABLE users (id INT, name TEXT);
+INSERT users (id, name) VALUES (74829475, 'Carl');
+INSERT users (id, name) VALUES (84628567, 'Scott');
+
+3)
+C:\Program Files\MySQL\MySQL Server 8.0\bin>mysqldump example -u root -p > dump.sql
+
+CREATE DATABASE sample;
+
+C:\Program Files\MySQL\MySQL Server 8.0\bin>mysql -u root -p sample < "C:\Program Files\MySQL\MySQL Server 8.0\bin\dump.sql"
+
+4)
+C:\Program Files\MySQL\MySQL Server 8.0\bin>mysqldump mysql help_keyword --where "true limit 100" -u root -p > dump.sql
